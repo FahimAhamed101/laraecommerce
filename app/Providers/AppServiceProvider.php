@@ -7,19 +7,19 @@ use Illuminate\Support\Facades\URL;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register any application services.\URL::forceScheme('https');
      */
     public function register(): void
     {
        
-        \URL::forceScheme('https');
+        
     }
 
     /**
-     * Bootstrap any application services. \URL::forceScheme('https');
+     * Bootstrap any application services. 
      */
     public function boot(): void
     {
-        //
+        \URL::forceScheme('https');
     }
 }

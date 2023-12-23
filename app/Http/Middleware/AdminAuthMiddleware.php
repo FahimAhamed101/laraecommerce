@@ -20,7 +20,7 @@ class AdminAuthMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::user() && Auth::user()->getRole() == 'admin') {
-    return $next($request);
+            return redirect('/admin');
     } else {
     return redirect()->route('home.index');
     }
